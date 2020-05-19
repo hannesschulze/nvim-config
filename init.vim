@@ -12,6 +12,7 @@ Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Valloric/YouCompleteMe'
+Plug 'matze/vim-meson'
 
 call plug#end()
 
