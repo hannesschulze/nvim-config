@@ -13,6 +13,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Valloric/YouCompleteMe'
 Plug 'matze/vim-meson'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -23,6 +25,7 @@ set tabstop=4
 set list
 set cursorline
 set number
+set nofixendofline
 "set spell spelllang=en_us
 
 " nerdtree
@@ -50,3 +53,8 @@ let g:neoformat_enabled_cpp = ['clang-format']
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '/home/hannes/.config/nvim/ycm_extra_conf.py'
 set completeopt-=preview
+
+" fzf
+let g:fzf_preview_window = ''
+let g:fzf_buffers_jump = 1
+map <silent> <C-p> :GFiles<CR>
