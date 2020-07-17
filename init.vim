@@ -2,7 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'APZelos/blamer.nvim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sainnhe/sonokai'
 Plug 'vim-airline/vim-airline'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-jp/vim-cpp'
@@ -34,7 +34,13 @@ set completeopt-=preview
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 " Colorscheme
-colorscheme dracula
+set termguicolors
+
+let g:sonokai_enable_italic = 1
+let g:sonokai_disable_italic_comment = 1
+let g:sonokai_transparent_background = 1
+
+colorscheme sonokai
 
 " vim-markdown
 let g:vim_markdown_frontmatter = 1
